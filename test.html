@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>F1(Fomular 1)</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" rel="stylesheet2">
+    <style>
+      /* 기본 배경 베이스 및 폰트 ai추천 */
+      body {
+        background-color: #f4f7f6; /* 약간의 회색빛이 도는 흰색이 눈이 편합니다 */
+        font-family: 'Pretendard', sans-serif; /* 폰트만 바꿔도 느낌이 확 살아요 */
+      }
+      /* css 수정 */
+      .d-flex.justify-content-center{
+        margin-top: 1.5%;
+      }
+      .a, .b, .c{
+        text-align: center; background: url(img/background.jpg) no-repeat center;
+      }
+      .a-name, .b-name, .c-name{
+        font-weight: bold; padding-top: 1.5%; padding-left: 1.5%; text-align: left;
+      }
+      .container-fluid{
+        background: url(img/beach.jpg) no-repeat;
+      }
+      .modal-body{
+        padding:5%;
+      }
+      /* ai를 이용한 class선택자 생성 및 스타일 간략화 적용 */
+      .skill-card{
+        width: 45%;
+        height:500px;
+        background-color: #f8f9f0;
+        border-radius: 15px;
+        vertical-align: middle;
+        padding: 5% 2% 2% 2%;
+        margin: 1%;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+      }
+      /* ai활용(애니메이션 효과 적용) */
+      .skill-card:hover{
+        transform: translateY(-10px); /* 살짝 떠오르는 효과 */
+        box-shadow: 0 15px 40px rgba(0,0,0,0.1);
+      }
+      .progress {
+        height: 12px;
+        margin-bottom: 25px;
+        border-radius: 10px;
+        background-color: #e9ecef;
+      }
+      .card{
+        float: left;
+        margin-top: 1%;
+        margin-bottom: 1%;
+        margin-left: 2%;
+        margin-right: 2%;
+        height:350px;
+      }
+      .card-title{
+        font-weight: bold;
+      }
+      input, textarea {
+        display: block;
+        }
+        .reservation {
+        padding-left: 25px;
+        text-align: left;
+        }
+
+        .reservation form{
+            margin: 0 auto;
+            background-color: #fff;
+            max-width: 800px;
+        }
+        .submit{
+            color:white;
+            background-color: #000;
+            padding: 10px;
+            font-size:1rem;
+            width: 150px;
+        }
+    </style>
+</head>
+<body>
+    <!-- 네비게이션 바 생성 및 설정 -->
+    <nav class="navbar navbar-expand-lg bg-body-tertiary" >
+        <div class="container-fluid" >
+          <a class="navbar-brand" href="#" style="color:red; font-weight:bold; font-size:25px;">F1</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="navbar-nav nav-underline">
+              <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="#a">F1 기본정보</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#b">F1의 역사</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#c">아제르바이잔 그랑프리 예매하기</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+    </nav>
+    <div class="a" id="a">
+      <h4 class="a-name">F1 기본정보</h4>
+      <div style="max-width: 600px; margin: 0 auto;">
+        <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="img/f1_1.jpg" class="d-block w-100" alt="f1_1">
+            </div>
+            <div class="carousel-item">
+                <img src="img/f1_2.jpg" class="d-block w-100" alt="f1_2">
+            </div>
+            <div class="carousel-item">
+                <img src="img/f1_3.jpg" class="d-block w-100" alt="f1_3">
+            </div>
+            <div class="carousel-item">
+                <img src="img/f1_4.jpg" class="d-block w-100" alt="f1_4">
+            </div>
+            <div class="carousel-item">
+                <img src="img/f1_5.jpg" class="d-block w-100" alt="f1_5">
+            </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+            </button>
+            </div>
+        </div>
+      <div style="background-color: #fff; padding:1%; border-radius: 1%;">
+        <h2 style="font-weight: bold;">F1 기본정보</h2>
+        <p>국제자동차연맹 FIA에서 주관하고 F1 그룹이 상업적 주관을 하는 국제 자동차 프로 레이싱 대회.
+
+            정식 명칭은 FIA Formula One World Championship. 약칭으로 Formula 1, F1을 사용한다.</p>
+        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop" style="text-align: center;">
+          기본 정보
+        </button>
+      </div>
+    </div>
+    <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true" >
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h1 class="modal-title fs-5" id="staticBackdropLabel">2026시즌 간략 정보</h1>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <div class="mb-4">
+                <h6 class="fw-bold text-primary border-bottom pb-2">2026시즌 참가팀 (총 11팀)</h6>
+                <p><b>맥라렌</b></p>
+                <p><b>메르세데스</b></p>
+                <p><b>레드불</b></p>
+                <p><b>페라리</b></p>
+                <p><b>윌리엄스</b></p>
+                <p><b>레이싱 불스</b></p>
+                <p><b>애스턴 마틴</b></p>
+                <p><b>하스</b></p>
+                <p><b>아우디</b></p>
+                <p><b>알핀</b></p>
+                <p><b>캐딜락</b></p>
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">닫기</button>
+            </div>
+          </div>
+        </div>
+    </div>
+    <br><hr><br>
+    <div class="b" id="b">
+        <h4 class="b-name">F1의 역사</h4>
+        <div class="d-flex justify-content-center">
+        <div class="skill-card text-center">
+            <h2 class="text-center" style="font-weight: bold;">2차 세계대전 이후 개정</h3><br>
+            <p>제2차 세계 대전 이후, 새로운 챔피언십 대회는 1950년에 시작되도록 제정되었다. F1의 첫 번째 세계 챔피언십 경주는 1950년 5월 13일 영국의 실버스톤 서킷을 시작으로 7개의 라운드로 구성된 첫 시즌으로 시작되었다. 드라이버 챔피언십과 달리 컨스트럭터 챔피언십 제도는 즉시 도입되지 않았다. 드라이버 월드 챔피언십은 첫 해부터 몇몇 레이스에서 시상했고, 컨스트럭터 챔피언십은 8년이나 지난 후에 신설했다. 초창기에는 유럽에서 늦은 봄부터 초가을(가을)까지 20개 이상의 레이스가 열렸으나 모든 경기가 챔피언십에 포함되는 것은 아니었다. 가장 경쟁력 있던 차량들은 이탈리아, 특히 알파 로메오에서 주로 나왔으며 드라이버들로는 알베르토 아스카리와 후안 마누엘 판지오 같은 1910년대생 드라이버들이 떠오르는 반면, 루돌프 카라치올라, 맨프레드 폰 브라우치히 및 타지오 누볼라리 등 1900년대 생 제2차 세계 대전 이전 그랑프리 드라이버들은 경력을 끝내기 시작했다.
+            </p>
+        </div>
+        <div class="skill-card text-center">
+            <h2 class="text-center" style="font-weight: bold;">첫 번째 F1 레이스</h3><br>
+            <p>첫 번째 F1 레이스가 무엇인지는 약간의 논쟁이 있다. 챔피언십 이전의 새로운 규정에 따른 첫 번째 레이스는 9월 1일에 열린 1946년 토리노 그랑프리였으며, 이 경주에서는 알파 로메오 158 알페타를 주행한 아칠레 바르지(Achille Varzi)가 우승했다. 하지만 이는 규정이 공식적으로 시행되기 전이었는데, ERA 차량을 탄 렉 파넬(Reg Parnell)이 우승했던 1947년 스웨덴 겨울 그랑프리도 있었으나 도로가 아닌 얼음 위에서 진행되었기 때문에 일부에서는 적절한 레이스가 아니라고 여긴다. 다른 사례로는 1947년 넬로 파가니(Nello Pagani)가 마세라티 4CL을 운전하여 우승한 포 그랑프리인데, 이는 반박의 여지가 없는 것으로 보지만 대체적으로 첫 번째 그랑프리는 F1의 시작을 예상한 1946년 토리노 그랑프리로 여긴다.</p>
+        </div>
+        </div>
+        <div class="d-flex justify-content-center">
+        <div class="skill-card" style="width:92%; height:10%;">
+            <h2 class="text-center"style="font-weight: bold;">지배 구조</h2>
+            <p>F1®은 일종의 브랜드이며 해당 브랜드를 소유하고 있는 곳은 포뮬러 원 그룹이다. 포뮬러 원 그룹은 1974년 창설된 FOCA(Formula One Constructors Association)의 후신이며 소유하고 있는 브랜드로는 포뮬러 1과 포뮬러 원 패독 클럽이 있다. 포뮬러 원 그룹은 자회사로 도르나 스포츠 유한회사(Dorna Sports, S.L.), 포뮬러 원 월드 챔피언십 유한회사, 포뮬러 원 판촉 및 관리 부서, 포뮬러 원 운영사(FOM)를 소유하고 있다.
+
+                2017년 1월에 리버티 미디어가 44억 달러에 포뮬러 원 그룹의 지배적 지분을 매수하는 거래가 체결됐으며, 실질적으로 F1의 소유자는 리버티 미디어다. 주의할 점은 리버티 미디어가 가지고 있는 것은 어디까지 F1에 대한 상업적 권리일 뿐이지 지배권이 아니다. 당연하다면 당연하지만 F1 참가팀 중에서 리버티 미디어보다 거대한 기업이 한 둘이 아니다. 때문에 리그 운영이 언제나 참가팀 정치싸움으로 진행된다.</p>
+        </div>
+        </div>
+    </div>
+    <br><hr><br>
+    <div class="c" id="c">
+        <h4 class="c-name">아제르바이잔 그랑프리 예매하기</h4>
+        <div class="reservation">
+            <form>
+                <h4 class="text-center" style="font-weight:bold;">아제르바이잔 그랑프리 간단예매</h2>
+              <label for="fname">성</label>
+              <input type="text" name="fname" required>
+              <label for="lname">이름</label>
+              <input type="text" name="lname" required> <hr>
+              <label for="email">이메일</label>
+              <input type="email" name ='email' placeholder="example@mail.com" required>
+              <label for="tel">전화번호</label>
+              <input type="tel" placeholder="010-0000-0000" required>
+              <label for="date">날짜</label>
+              <input type='date'>
+              <label for="comments">추가 또는 문의</label>
+              <textarea name="comments" id="" cols="50" rows="5"></textarea><br>
+
+              <input type="submit" class="submit" value="예매 확정">
+            </form>
+    </div>
+</body>
+</html>
